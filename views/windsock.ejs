@@ -62,6 +62,7 @@ WSinstance.currentFrame = WSframeToPlay;
             
             WSinstance.$el
                 .on("touchstart", function () {
+
 	//				console.log('mouse down');
 					mouseIsDown = "true";
 					last_position = {
@@ -120,6 +121,8 @@ WSinstance.currentFrame = WSframeToPlay;
 			})
 			
                 .on("touchend", function () {
+				
+				  $(".WSinitButton-checkbox").prop("checked", "on")
 					mouseIsDown = "false";
 		//									console.log('mouseIsDown = false ');
 
@@ -142,7 +145,7 @@ WSinstance.currentFrame = WSframeToPlay;
 
             WSinstance.$dispatcher
                 .on(SpriteClip.Event.ENTER_FRAME, function (e, clip) {
-					
+
 					WScurrentValue = (WSinstance.currentFrame/WSnumFrames)*100;
 
 					var valueText = (WScurrentValue*0.1456)-0.5523;	
@@ -156,6 +159,8 @@ WSinstance.currentFrame = WSframeToPlay;
 				
 				
 				$('#WSupButton').click(function(TouchEvent){
+								  $(".WSinitButton-checkbox").prop("checked", "on")
+
 				  	event.preventDefault();
 
 					if 	(+WSinstance.currentFrame < +WSnumFrames) {
@@ -180,6 +185,9 @@ WSinstance.currentFrame = WSframeToPlay;
 					};
 				});
 			$('#WSdownButton').click(function(TouchEvent){
+
+							  $(".WSinitButton-checkbox").prop("checked", "on")
+
 			  	event.preventDefault();
 
 				if 	(WSinstance.currentFrame > 6) {
