@@ -405,7 +405,7 @@ svg {
 	.recordButtons {
 			position: absolute;
 			width: 158px;
-			left: 1600px; top: 910px;
+			left: 1400px; top: 910px;
 			   -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
  border-right:none;
 
@@ -454,4 +454,27 @@ svg {
     right: 0px; 
 }
 
+
+.saveDataButtonDiv{
+			position: absolute;
+			width: 158px;
+			left: 1600px; top: 910px;
+			   -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+ border-right:none;
+
+}
+.saveDataButtonDiv :active{
+	background-color: #FC3737;
+	position:relative;
+	top:1px;
+}
+.saveDataButton {
+    position: relative; width: 75px; height: 30px;
+	font-size: 18px; color: #5C5C5B; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+	background-color: #75B1FF;
+	border: 2px solid #999999; border-radius: 17px;
+	outline: none;
+	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	cursor: pointer;
+}
 	
