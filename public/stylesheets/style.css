@@ -431,13 +431,15 @@ svg {
 .recordButtons-inner:after {
     content: "    Recording";
     padding-left: 12px;
+	    text-align: center;
+
     background-color: #FC3737; color: #5C5C5B;
 }
 .recordButtons-inner:before {
-    content: "Record OFF    ";
+    content: "Record OFF     ";
     padding-right: 12px;
     background-color: #B0B0B0; color: #5C5C5B;
-    text-align: right;
+    text-align: center;
 }
 .recordButtons-switch {
     display: block; width: 43px; margin: -8.5px;

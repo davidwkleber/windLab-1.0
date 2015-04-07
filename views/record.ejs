@@ -20,7 +20,7 @@
 	</div>
 
 		<div class="recordButtons"  id="recordButtons" name="recordButtons">
-    <input type="checkbox" name="recordButtons-checkbox" class="recordButtons-checkbox" id="myrecordButtons">
+    <input type="checkbox" name="recordButtons-checkbox" class="recordButtons-checkbox" id="myrecordButtons" checked>
     <label class="recordButtons-label" for="myrecordButtons">
         <span class="recordButtons-inner"></span>
         <span class="recordButtons-switch"></span>
@@ -116,16 +116,16 @@
 		function stopRecordFunction() {
 		//	console.log('stop recording');
 			recordDataFlag = false;
-			console.log('record button is: '+$(".recordButtons-checkbox:checked").val());
+					console.log('record button in stopRecordFunction  is: '+$(".recordButtons-checkbox:checked").val());
 
-			 $(".recordButtons-checkbox").prop("checked", "off")
+			 $(".recordButtons-checkbox").prop("checked", "on")
 
 			$('#recordButton').css('background-color','#e8e8e8');
 			// recordsocket.disconnect();
 		}
 		
 		function saveDataFunction() {
-					console.log('record button is: '+$(".recordButtons-checkbox:checked").val());
+					console.log('record button in saveDataFunction is: '+$(".recordButtons-checkbox:checked").val());
 
 			if ( recordDataFlag === true ) {
 					stopRecordFunction()
@@ -174,13 +174,13 @@
 		//	console.log("INIT on click");
 				recordSelection = $(".recordButtons-checkbox:checked").val();
 			//	console.log("init on? "+PAinitSelection);
-				if (recordSelection == "on") {
+				if (recordSelection != "on") {
 					console.log("Record ON");
 					recordFunction()
 		
 				} else {
 					console.log("Record OFF");
-								// console.log('record button is: '+$(".recordButtons-checkbox:checked").val());
+								 console.log('record button is: '+$(".recordButtons-checkbox:checked").val());
 
 					if ( recordDataFlag === true ) {
 						stopRecordFunction()
