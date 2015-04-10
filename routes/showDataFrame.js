@@ -21,7 +21,7 @@ console.log('showDataFrame get');
 console.log('showDataFrame get: dataFrameContent: '+ req.param('dataFrameContent', null));
 dataFrameContent = req.param('dataFrameContent', null);
 
-// res.redirect('index');
+ res.redirect('/');
 })
 
 router.post('/', function(req, res, next){

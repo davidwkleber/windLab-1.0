@@ -43,6 +43,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('serialListener()');
 
 app.use('/', routes);
+app.use('index', routes);
+
 app.use('/users', users);
 
 app.use('/pitchAngle', pitchAngle);
