@@ -7,7 +7,8 @@ var router = express.Router();
 router.get('/', function(req, res) {
 console.log('route index get ');
 // console.log('index title: '+req.locals.title);
-	res.render('index', { title: 'Wind Lab' });
+console.log('index: dataFrameContent: ' + dataFrameContent );
+	res.render('index', { title: 'WindLab', dataFrameContent: dataFrameContent });
  	// serialListener();
 });
 

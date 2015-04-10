@@ -9,11 +9,11 @@ function JSON2TSV(objArray) {
         if ($("#quote").is(':checked')) {
             for (var index in array[0]) {
                 var value = index + "";
-                line += '"' + value.replace(/"/g, '""') + '"/t';
+                line += '"' + value.replace(/"/g, '""') + '",';
             }
         } else {
             for (var index in array[0]) {
-                line += index + '/t';
+                line += index + '	';
             }
         }
 
@@ -31,7 +31,7 @@ function JSON2TSV(objArray) {
             }
         } else {
             for (var index in array[i]) {
-                line += array[i][index] + ',';
+                line += array[i][index] + '	';
             }
         }
 
