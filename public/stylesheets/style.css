@@ -402,7 +402,25 @@ svg {
 		overflow: hidden;
 
 	}
-	
+	.powerCurveContainer {
+		position: absolute;
+		left: 840px;
+		top: 200px;
+		width: 1000px;
+		height: 700px;
+		 border-right:none;
+		overflow: hidden;
+
+	 {
+		position: absolute;
+		left: 840px;
+		top: 200px;
+		width: 1000px;
+		height: 700px;
+		 border-right:none;
+		overflow: hidden;
+
+	}
 /*
 	Settings for record functions
 		views/record.ejs
