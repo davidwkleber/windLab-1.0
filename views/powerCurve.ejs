@@ -1,12 +1,23 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>dataFrame</title>
- </head>
-<body>
+
+	<script src='/lib/ajax/libs/2.0.3/jquery.min.js'></script>
+	<script src='/lib/socket.io/socket.io.js'></script>
+	<script src='/lib/SpriteClip/spriteclip.min.js'></script>
+	<script src='/lib/d3js/d3.v3.min.js'></script>
+	<script src='/lib/FileSaver/FileSaver.min.js'></script>
+	
 <link rel="stylesheet" href="../stylesheets/style.css">
-<iframe id="dataFrame" class="dataFrame" name="dataFrame" frameBorder="0" src="../../views/powerCurveGraph.ejs"></iframe>
+  <meta charset="utf-8">
+  <title><%= title %></title>
+</head>
+<body>
+<div class="bodyDiv">
+
+		<%include powerCurveGraph %>
+	
+</div>
+
 </body>
 </html>

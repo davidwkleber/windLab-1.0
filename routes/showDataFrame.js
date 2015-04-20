@@ -7,7 +7,7 @@
 var express = require('express');
 var router = express.Router();
 
-dataFrameContent = 'controlGraph';
+// dataFrameContent = '';
 
 // middleware specific to this route, logs timestamps
 router.use(function timeLog(req, res, next){

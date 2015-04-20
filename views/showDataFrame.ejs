@@ -7,6 +7,7 @@
  </head>
 <body>
 <link rel="stylesheet" href="../stylesheets/style.css">
-<iframe id="dataFrame" class="dataFrame" name="dataFrame" frameBorder="0" src="../../views/controlGraph.ejs"></iframe>
+<% console.log("in showDataFrame: ", dataFrameContent) %>
+	<%- include(dataFrameContent) -%>
 </body>
 </html>

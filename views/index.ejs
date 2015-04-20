@@ -14,6 +14,7 @@
 </head>
 <body>
 <div class="bodyDiv">
+	<% console.log("Start indeX"); %> 
 
 	<% include guages %>
 
@@ -27,9 +28,9 @@
 		
 	<% include dataInput %>
 
-	<%include powerCurveGraph %>
+	<% include showDataFrame %>
 
-
+	<% console.log("in index: dataFrameContent ", dataFrameContent) ; %> 
 </div>
 
 </body>
