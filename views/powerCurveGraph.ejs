@@ -1,12 +1,16 @@
-<!DOCTYPE HTML>
-<html>
+	
+			
+	<div id="powerCurveContainer" >
+	</div>
 
-<head>
+	<script type="text/javascript" src="/lib/canvasJS/canvasjs.min.js"></script>
+		
 	<script type="text/javascript">
 	window.onload = function () {
 		var chart = new CanvasJS.Chart("powerCurveContainer",
 		{
 			zoomEnabled: true,
+			backgroundColor: null,
 			title:{
 				text: "Power CUrve: 100,000 Data Points"
 				},
@@ -41,14 +45,8 @@
 		
 		console.log("POWER CURVE GRAPH");
 		</script>
-		
-		<script type="text/javascript" src="/lib/canvasJS/canvasjs.min.js"></script></head>
-			<body>
-				<div id="powerCurveContainer" class="powerCurveContainer" >
-			</div>
-		</body>
-		</html>
-		
+
+	
 		
 		
 		
