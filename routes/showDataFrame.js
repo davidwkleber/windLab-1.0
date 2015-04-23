@@ -20,8 +20,9 @@ router.get('/', function(req, res){
 console.log('showDataFrame get');
 console.log('showDataFrame get: dataFrameContent: '+ req.param('dataFrameContent', null));
 dataFrameContent = req.param('dataFrameContent', null);
+ // res.reload('index.ejs', {title: "WindLab", dataFrameContent: dataFrameContent });
 
- res.redirect('/');
+res.render('index.ejs', {title: "WindLab", dataFrameContent: dataFrameContent });
 })
 
 router.post('/', function(req, res, next){

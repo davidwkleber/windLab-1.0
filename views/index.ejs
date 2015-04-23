@@ -12,13 +12,14 @@
   <meta charset="utf-8">
   <title><%= title %></title>
 </head>
+
 <body>
 <div class="bodyDiv">
 	<% console.log("Start indeX"); %> 
+	
+	<%include infoFrame %>
 
 	<% include guages %>
-
-	<%include infoFrame %>
 	
 	<% include windsock %>
 
@@ -27,9 +28,10 @@
 	<% include dummyLoad %>
 		
 	<% include dataInput %>
+<div id="dataFrame" >
 
-	<% include showDataFrame %>
-
+	<%- include(dataFrameContent) -%>
+</div>
 	<% console.log("in index: dataFrameContent ", dataFrameContent) ; %> 
 </div>
 
