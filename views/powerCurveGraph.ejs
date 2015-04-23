@@ -30,6 +30,7 @@
 		
 		var limit = 100000; //increase number of data Points by increasing this
 		
+	/* 
 		var y = 0;
 		var data = []; var dataSeries = { type: "line" };
 		var dataPoints = [];
@@ -40,10 +41,41 @@
 				y: y
 			});
 		}
+		
 		dataSeries.dataPoints = dataPoints;
 		data.push(dataSeries);
-		
+		*/
 		console.log("POWER CURVE GRAPH");
+		var data = []; var dataSeries = { type: "line" };
+		var dataPoints = [];
+		
+		
+		
+		
+	
+		
+			var dataItem;
+			var lineGraphSocket = io.connect('http://127.0.0.1:1337');
+
+			lineGraphSocket.on('connect', function (dataIn) {
+					console.log('lineGraph client connected ');
+			//		console.log('lineGraph connected data ' + data);
+
+				
+			jQuery(function ($) {
+				lineGraphSocket.on('updateData', function (data) {
+			//		console.log('lineGraph update: ' + data);
+					dataItem = JSON.parse(dataIn);
+					
+						dataPoints.push({
+							x: dataItem.power,
+							y: dataItem.current
+						});
+					});
+				 dataSeries.dataPoints = dataPoints;
+				data.push(dataSeries)
+				});
+		});
 		</script>
 
 	
