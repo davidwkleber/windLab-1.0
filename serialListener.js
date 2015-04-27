@@ -186,7 +186,7 @@ io.sockets.on('connection', function(socket){
 			sendJSON += "  \"dummyLoad\": "+dummyLoadValueText+"\n";
 			sendJSON += "}";
 			
-			// console.log( "serialListener send JSON : \n"+sendJSON);	
+			console.log( "serialListener send JSON : \n"+sendJSON);	
 
 			io.emit('updateData', sendJSON);
 

@@ -513,4 +513,84 @@ svg {
 	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 	cursor: pointer;
 }
+
+
+/* For Power Curve Record and buttons */
+
+	.PCrecordButtons {
+			position: absolute;
+			width: 158px;
+			left: 600px; top: 700px;
+			   -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+ border-right:none;
+
+		}
+
+.PCrecordButtons-checkbox {
+    display: none;
+}
+.PCrecordButtons-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 17px;
+}
+.PCrecordButtons-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.PCrecordButtons-inner:before, .PCrecordButtons-inner:after {
+    display: block; float: left; width: 50%; height: 26px; padding: 0; line-height: 26px;
+    font-size: 18px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.PCrecordButtons-inner:after {
+    content: "    Recording";
+    padding-left: 12px;
+	    text-align: center;
+
+    background-color: #FC3737; color: #5C5C5B;
+}
+.PCrecordButtons-inner:before {
+    content: "Record OFF     ";
+    padding-right: 12px;
+    background-color: #B0B0B0; color: #5C5C5B;
+    text-align: center;
+}
+.PCrecordButtons-switch {
+    display: block; width: 43px; margin: -8.5px;
+    background: #FFFFFF;
+    border: 2px solid #999999; border-radius: 17px;
+    position: absolute; top: 0; bottom: 0; right: 128px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+.PCrecordButtons-checkbox:checked + .recordButtons-label .recordButtons-inner {
+    margin-left: 0;
+}
+.PCrecordButtons-checkbox:checked + .recordButtons-label .recordButtons-switch {
+    right: 0px; 
+}
+
 	
+.PCsaveDataButtonDiv{
+			position: absolute;
+			width: 158px;
+			left: 900px; top: 700px;
+			   -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+ border-right:none;
+
+}
+.PCsaveDataButtonDiv :active{
+	background-color: #FC3737;
+	position:relative;
+	top:1px;
+}
+.PCsaveDataButton {
+    position: relative; width: 75px; height: 30px;
+	font-size: 18px; color: #5C5C5B; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+	background-color: #75B1FF;
+	border: 2px solid #999999; border-radius: 17px;
+	outline: none;
+	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	cursor: pointer;
+}

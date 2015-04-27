@@ -3,16 +3,31 @@
 	<div id="powerCurveContainer" >
 	</div>
 
+  	<div class="PCsaveDataButtonDiv">
+		<button class="PCsaveDataButton" id="PCsaveDataButton" name="PCsaveDataButton" onclick="PCsaveDataFunction()">Save</button>
+	</div>
+	<div class="PCrecordButtonsDiv" name="PCrecordButtonsDiv" id="PCrecordButtonsDiv" >
+	</div>
+
+		<div class="PCrecordButtons"  id="PCrecordButtons" name="PCrecordButtons">
+    <input type="checkbox" name="PCrecordButtons-checkbox" class="PCrecordButtons-checkbox" id="myPCrecordButtons" checked>
+    <label class="PCrecordButtons-label" for="myPCrecordButtons">
+        <span class="PCrecordButtons-inner"></span>
+        <span class="PCrecordButtons-switch"></span>
+    </label>
+</div>
 	<script type="text/javascript" src="/lib/canvasJS/canvasjs.min.js"></script>
 		
 	<script type="text/javascript">
-	window.onload = function () {
+//	window.onload = function () {
+			var data = []; var dataSeries = { type: "line" };
+		var dataPoints = [];
 		var chart = new CanvasJS.Chart("powerCurveContainer",
 		{
 			zoomEnabled: true,
 			backgroundColor: null,
 			title:{
-				text: "Power CUrve: 100,000 Data Points"
+				text: "Power Curve"
 				},
 				animationEnabled: true,
 				axisX:{
@@ -26,7 +41,7 @@
 			});
 			
 			chart.render();
-		}
+//		}
 		
 		var limit = 100000; //increase number of data Points by increasing this
 		
@@ -46,8 +61,7 @@
 		data.push(dataSeries);
 		*/
 		console.log("POWER CURVE GRAPH");
-		var data = []; var dataSeries = { type: "line" };
-		var dataPoints = [];
+
 		
 		
 		
@@ -69,11 +83,13 @@
 					
 						dataPoints.push({
 							x: dataItem.power,
-							y: dataItem.current
+							y: dataItem.rpm
 						});
 					});
 				 dataSeries.dataPoints = dataPoints;
 				data.push(dataSeries)
+							chart.render();
+
 				});
 		});
 		</script>
