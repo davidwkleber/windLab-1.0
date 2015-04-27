@@ -141,7 +141,7 @@ io.sockets.on('connection', function(socket){
  var chunksIn = 0;
  
     DIserialPort.on('data', function(data) {
-				console.log('DataInput : '+data);
+				// console.log('DataInput : '+data);
 
 		chunksIn = chunksIn+1;
         receivedData += data.toString();

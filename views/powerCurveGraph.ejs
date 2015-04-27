@@ -2,7 +2,13 @@
 			
 	<div id="powerCurveContainer" >
 	</div>
-
+	
+	
+<script type="text/javascript" src="/javascripts/JSON2CSV.js"></script>
+<script type="text/javascript" src="/javascripts/JSON2TSV.js"></script>
+	<script type="text/javascript" src="/lib/canvasJS/canvasjs.min.js"></script>
+		
+	
   	<div class="PCsaveDataButtonDiv">
 		<button class="PCsaveDataButton" id="PCsaveDataButton" name="PCsaveDataButton" onclick="PCsaveDataFunction()">Save</button>
 	</div>
@@ -16,12 +22,11 @@
         <span class="PCrecordButtons-switch"></span>
     </label>
 </div>
-	<script type="text/javascript" src="/lib/canvasJS/canvasjs.min.js"></script>
-		
 	<script type="text/javascript">
-//	window.onload = function () {
-			var data = []; var dataSeries = { type: "line" };
-		var dataPoints = [];
+
+// window.onload = function () {
+			var data = []; var dataSeries = { type: "scatter" };
+
 		var chart = new CanvasJS.Chart("powerCurveContainer",
 		{
 			zoomEnabled: true,
@@ -40,28 +45,14 @@
 				data: data //random generator below
 			});
 			
-			chart.render();
-//		}
+			// chart.render();
+	//	}
 		
-		var limit = 100000; //increase number of data Points by increasing this
+		var limit = 10000; //increase number of data Points by increasing this
 		
-	/* 
-		var y = 0;
-		var data = []; var dataSeries = { type: "line" };
-		var dataPoints = [];
-		for (var i = 0; i < limit; i += 1) {
-			y += (Math.random() * 10 - 5);
-			dataPoints.push({
-				x: i - limit / 2,
-				y: y
-			});
-		}
-		
-		dataSeries.dataPoints = dataPoints;
-		data.push(dataSeries);
-		*/
-		console.log("POWER CURVE GRAPH");
 
+		console.log("POWER CURVE GRAPH");
+		var dataPoints = [];
 		
 		
 		
@@ -72,26 +63,62 @@
 			var lineGraphSocket = io.connect('http://127.0.0.1:1337');
 
 			lineGraphSocket.on('connect', function (dataIn) {
-					console.log('lineGraph client connected ');
+					console.log('powerCurve client connected ');
 			//		console.log('lineGraph connected data ' + data);
 
 				
 			jQuery(function ($) {
-				lineGraphSocket.on('updateData', function (data) {
-			//		console.log('lineGraph update: ' + data);
+				lineGraphSocket.on('updateData', function (dataIn) {
+			//	console.log('powerCurve update: ' + dataIn);
 					dataItem = JSON.parse(dataIn);
 					
 						dataPoints.push({
 							x: dataItem.power,
 							y: dataItem.rpm
 						});
-					});
+					
 				 dataSeries.dataPoints = dataPoints;
-				data.push(dataSeries)
+				data.push(dataSeries);
 							chart.render();
-
+});
 				});
 		});
+		
+				function PCsaveDataFunction() {
+				//	console.log('record button in saveDataFunction is: '+$(".recordButtons-checkbox:checked").val());
+
+			// if ( recordDataFlag === true ) {
+			// 		stopRecordFunction()
+			
+	//		console.log('save data');
+	//		console.log('recorded data saved: '+data);
+			
+		//	recordDataFlag = false;
+
+			// $('#recordButton').css('background-color','#e8e8e8');
+						
+			// var json = JSON.stringify(data);
+			var json = data;
+		//	var blob = new Blob([json], {type: "application/json"});
+			
+			var tsv = JSON2TSV("["+json+"]");
+			var blob = new Blob([tsv], {type: "application/csv"});
+	
+			var url = URL.createObjectURL(blob);
+			
+			var a = document.createElement('a');
+			a.id = "saveDataLinkPlace";
+			var date = new Date();
+			var fileName = "PowerCurve_data."+date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+"."+date.getMinutes()+".tsv";
+			a.download = fileName;
+			a.href = url;
+			a.textContent = "Download data as JSON";
+			
+			saveAs(blob,fileName);
+	
+			data = [];
+		}
+		
 		</script>
 
 	
