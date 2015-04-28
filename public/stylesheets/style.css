@@ -408,16 +408,29 @@ svg {
 		left: 840px;
 		top: 200px;
 		width: 1000px;
-		height: 700px;
+		height: 900px;
 		 border-right:none;
+		 		  overflow: hidden;
+
 	}
 	#dataFrame {
 		position: absolute;
 		left: 840px;
 		top: 200px;
 		width: 1000px;
-		height: 700px;
+		height: 900px;
 		 border-right:none;
+		 		  overflow: hidden;
+
+	}
+	#tourFrame {
+		position:relative;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height:100%;
+		  overflow: hidden;
+
 	}
 	#powerCurveContainer {
 		position: relative;
