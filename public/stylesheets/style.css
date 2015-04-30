@@ -607,3 +607,28 @@ svg {
 	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 	cursor: pointer;
 }
+
+	
+.PCrecordDataButtonDiv{
+			position: absolute;
+			width: 158px;
+			left: 700px; top: 700px;
+			   -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+ border-right:none;
+
+}
+.PCrecordDataButtonDiv :active{
+	background-color: #FC3737;
+	position:relative;
+	top:1px;
+}
+.PCrecordDataButton {
+    position: relative; width: 75px; height: 30px;
+	font-size: 18px; color: #5C5C5B; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+	background-color: #75B1FF;
+	border: 2px solid #999999; border-radius: 17px;
+	outline: none;
+	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	cursor: pointer;
+}
+
