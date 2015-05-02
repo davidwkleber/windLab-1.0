@@ -27,16 +27,20 @@
 			var dataSeries = { type: "scatter" };
 			 var meanDataSeries = {type: "line" };
 			var dataPoints = [];
+			var meanDataPoints = [];
+
 			 meanData = []; 
+			 /*
 			 meanData.push({
 				x: 0,
 				y: 0
 			});
+			*/
 			dataPoints.push({
 				x: 0,
 				y: 0
 			});
-				meanDataSeries.dataPoints = meanData;
+			//	meanDataSeries.dataPoints = meanData;
 				meanDataLine.push(meanDataSeries);
 				
 				 dataSeries.dataPoints = dataPoints;
@@ -64,17 +68,18 @@
 				axisY:{
 					labelAngel: 30,
 					minimum: 0,
-					maximum: 3000,
+					maximum: 1000,
 					interval: 1000
 				},
 				axisX:{
 					includeZero: false,
-					minimum: 0,
-					maximum: 10000,
+					minimum: 95000,
+					maximum: 99000,
 					interval: 1000
 				},
 				
-				data: data //random generator below
+				// data: [meanDataLine, data]
+				   data: [ meanDataSeries, dataSeries ]
 			});
 			
 		 chart.render();
@@ -128,8 +133,9 @@
 					{
 						dataPoints.shift();				
 					}
-				console.log("dataSeries pushed "+dataPoints.length);	
-				console.log("dataSeries pushed X"+dataPoints);
+			//	console.log("dataSeries pushed "+dataPoints.length);	
+			//	var jsonObj = JSON.stringify(dataPoints);
+			//	console.log("dataSeries pushed obj: "+jsonObj);
 				
 				 dataSeries.dataPoints = dataPoints;
 				
@@ -139,16 +145,13 @@
 				{
 					data.shift();				
 				}
-				
-				
-				
-									console.log("data pushed "+data.length);		
-																		console.log("data pushed "+data);		
+								//	console.log("data pushed "+data.length);		
+								//										console.log("data pushed "+data);		
 
 
 
 			// context.clearRect(0, 0, chart.width, chart.height);
-						//	chart.render();
+							chart.render();
 });
 				});
 		});
@@ -159,14 +162,14 @@
 					meanDataData(inData);
 					console.log("in Record: meanDataPoint: "+meanData);
 						plotData.push(meanData);
-											console.log("in RECORD plotData: "+plotData);
+							//				console.log("in RECORD plotData: "+plotData);
 						
 					outData.push(inData);
 																//	console.log("in RECORD outData : "+outData);
 
 					inData = [];
-																				console.log("in RECORD inData size: "+outData.length);
-																								console.log("in RECORD inData size: "+outData);
+							//	console.log("in RECORD inData size: "+outData.length);
+							//	console.log("in RECORD inData size: "+outData);
 
 							chart.render();
 
@@ -174,20 +177,10 @@
 				}
 				
 				function PCsaveDataFunction() {
-				console.log('Save button in Power Curve: ');
-					console.log("in SAVE inData size: "+outData.length);
-					console.log("in SAVE outData : "+outData);															
-																					
-				//	console.log('record button in saveDataFunction is: '+$(".recordButtons-checkbox:checked").val());
+				// console.log('Save button in Power Curve: ');
+				//	console.log("in SAVE inData size: "+outData.length);
+				//	console.log("in SAVE outData : "+JSON.stringify(outData));															
 
-			// if ( recordDataFlag === true ) {
-			// 		stopRecordFunction()
-
-			
-		//	recordDataFlag = false;
-
-			// $('#recordButton').css('background-color','#e8e8e8');
-						
 			// var json = JSON.stringify(data);
 			var json = outData;
 		//	var blob = new Blob([json], {type: "application/json"});
@@ -218,7 +211,7 @@
 			   var sumRPM = 0;
 
 				for(var i = 0; i < dataTomeanData.length; i++) {
-					console.log("meanData: data to meanData: "+dataTomeanData[i]);
+					// console.log("meanData: data to meanData: "+dataTomeanData[i]);
 					
 					thisDataItem = JSON.parse(dataTomeanData[i]);
 							sumPower += dataItem.power;
@@ -226,27 +219,33 @@
 
 				};
 				
-										var x = (sumPower / inData.length);
-										var y = (sumRPM / inData.length);
+				var x = (sumPower / inData.length);
+				var y = (sumRPM / inData.length);
 
-
-			meanData.push( {
+	/*		meanDataLine.push( {
 				x :  x,
 				y : y
 			});
-											console.log("meanData: meanData data length: "+meanData.length);
-											console.log("meanData power: "+x);
-											console.log("meanData rpm: "+y);
-											console.log("meanData: meanData data : "+meanData.x);
+			*/
+			meanData.push( {
+				x: x,
+				y: y
+			});
+											// console.log("meanData: meanData data length: "+meanData.length);
+											//console.log("meanData power: "+x);
+											 // console.log("meanData rpm: "+y);
+											// console.log("meanData: meanData data : "+JSON.stringify(meanData));
 
 
-			if ( meanData.length > 1 ) {
-				meanData.shift();
-			}
+		//	if ( meanData.length > 1 ) {
+		//		meanData.shift();
+		//	}
 			meanDataSeries.dataPoints = meanData;
 			meanDataLine.push(meanDataSeries);
 			
-				console.log("meanDataSeries "+data);
+			console.log("meanDataSeries Line "+JSON.stringify(meanDataLine));
+			console.log("data current point "+JSON.stringify(data));
+
 				
 
 			}
