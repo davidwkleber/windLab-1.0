@@ -12,7 +12,7 @@ var x = d3.scale.linear()
     .range([0, width]);
  
 var y = d3.scale.linear()
-	.domain([1,4500])
+	.domain([1,1500])
    // .domain([d3.min(data, function(d) {return d.value;}), d3.max(data, function(d) {return d.value;})])
     .range([height, 0]);
  
@@ -48,7 +48,9 @@ var path = svg.append("g")
     .attr("class", "line")
     .attr("d", line);
  
-
+function changeAxis( axisMax ) {
+   y.domain([0, axisMax]);
+}
  
 function tick( value, axisMax ) {
 
@@ -72,19 +74,18 @@ function tick( value, axisMax ) {
   y.domain([yminAxis, ymax+axisMargin]);
  */
  
-   y.domain([0, axisMax]);
 
  var newsvg = d3.select("#lineGraphDiv").transition();
  
  newsvg.select(".y.axis")
-	.duration(500)
+	.duration(50)
 	.call(d3.svg.axis().scale(y).orient("left"));
   // redraw the line, and slide it to the left
   path
       .attr("d", line)
       .attr("transform", null)
     .transition()
-      .duration(500)
+      .duration(50)
       .ease("linear")
       .attr("transform", "translate(" + x(-1) + ",0)")
       .each("end", 00);

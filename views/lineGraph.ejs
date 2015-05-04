@@ -39,7 +39,7 @@
 		var powerMax = 1500;
 		var voltageMax = 15000;
 		var currentMax = 1000;
-		var rpmMax = 8000;
+		var rpmMax = 5000;
 		
 			$( ".dataSelectorRadio" ).on( "click", function() {
 
@@ -47,6 +47,29 @@
 						$("#lineGraphTitle").html($( ".dataSelectorRadio:checked" ).val() );
 
 			 dataSelected = $(".dataSelectorRadio:checked").val();
+			 
+					switch (dataSelected) {
+						case 'power':
+			//				console.log('graph power '+dataSelected);
+							changeAxis( powerMax );
+							break;
+						case 'current':
+			//				console.log('graph current '+dataSelected);
+							changeAxis( currentMax );
+							break;
+						case 'voltage':
+			//				console.log('graph voltage '+dataSelected);
+							changeAxis( voltageMax );
+							break;
+						case 'rpm':
+							// var realRPM = Math.floor(((dataItem.rpm * 3.3)/1024)*1000); //*666.667);
+			//				console.log('graph rpm '+dataSelected);
+							changeAxis( rpmMax );
+							break;
+						default:
+			//				console.log('graph default');
+							changeAxis( owerMax );
+					}
 		//	console.log('dataSelected item is: '+dataSelected);
 		});	
 						var dataItem;
@@ -61,7 +84,7 @@
 				lineGraphSocket.on('updateData', function (data) {
 			//		console.log('lineGraph update: ' + data);
 					dataItem = JSON.parse(data);
-			//		console.log('lineGraph updateData power ' + dataItem.power);
+					console.log('lineGraph updateData power ' + dataItem.power);
 
 					switch (dataSelected) {
 						case 'power':
