@@ -1,4 +1,4 @@
-
+var limit = 100;
 var n = 40,
     random = d3.random.normal(0, .2),
     data = d3.range(n).map(random);
@@ -8,11 +8,11 @@ var margin = {top: 20, right: 20, bottom: 20, left: 50},
     height = 600 - margin.top - margin.bottom;
  
 var x = d3.scale.linear()
-    .domain([0, n - 1])
+    .domain([0, limit - 1])
     .range([0, width]);
  
 var y = d3.scale.linear()
-	.domain([1,95000])
+	.domain([1,4500])
    // .domain([d3.min(data, function(d) {return d.value;}), d3.max(data, function(d) {return d.value;})])
     .range([height, 0]);
  

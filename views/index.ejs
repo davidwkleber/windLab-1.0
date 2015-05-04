@@ -15,18 +15,18 @@
 
 <body>
 <div class="bodyDiv">
-	<% console.log("Start indeX"); %> 
-	
-	<%include infoFrame %>
+		<% console.log("in index: iFrameContent ", dataFrameContent) ; %> 
+
+	<%- include(iFrameContent) -%>
 
 	<% include guages %>
-<!--	
+<!-- --!>	
 	<% include windsock %>
 
 	<% include pitchAngle %>
 		
 	<% include dummyLoad %>
---!>	
+	
 	<% include dataInput %>
 <div id="dataFrame" >
 

@@ -1,11 +1,9 @@
 body {
 	font-family: Trebuchet, Arial, sans-serif;
-	
+	clear left;
 }
-#tourHeading {
-	position: absolute;
-	top: 25px;
-	left: 650px
+p {
+	text-align: justify;
 }
 #cutInH{
 	position: relative;
@@ -15,62 +13,58 @@ body {
 }
 #counterMomentH{
 	position: relative;
-	top: 45px;
 	text-align: center;
+	top: 45px;
 	background-color: red;
 }
 .oneDiv{
 	position: absolute;
-	top: 60px;
-	left: 250px;
-	width: 1350px;
+	top: 55px;
+	left: 15%;
+	width: 70%;
 }
 .left2colDiv{
 	position: absolute;
-	top: 60px;
+	top: 55px;
 	left: 250px;
 	width: 650px;
 	display: block;
 }
 .right2colDiv{
 	position: absolute;
-	top: 60px;
+	top: 55px;
 	right: 250px;
 	width: 650px;
 }
 .left3colDiv{
 	position: absolute;
-	top: 60px;
+	top: 55px;
 	left: 200px;
 	width: 500px;
 	display: block;
 }
 .middle3colDiv{
 	position: absolute;
-	top: 60px;
+	top: 55px;
 	left: 750px;
 	width: 500px;
 }
 .right3colDiv{
 	position: absolute;
-	top: 60px;
+	top: 55px;
 	left: 1250px;
 	width: 500px;
 }
-p {
-	vertical-align: center;
-}
+
 .backDiv{
 	position: absolute;
-	top: 50px;
+	top: 55px;
 	left: 244px;
 	width: 500px;
 	height: 120px;
 	background-color: gray;
 }
-.expH2{
-	text-align: center;
-	vertical-align: middle;
+
 }
 .expAdiv{
 	position: absolute;
@@ -94,10 +88,6 @@ p {
 	width: 16.6667%;
 	float: left;
 }
-.navImg2 {
-	width: 12.5%;
-	float: left;
-}
 nav {
 	font-size: 0;
 	position: absolute;
@@ -108,22 +98,14 @@ nav {
 
 #previous{
 	position: absolute;
-	top: 60px;
+	top: 70px;
 	left: 20px;
+	/*height: 160px*/
 }
 #next{
 	position: absolute;
-	top: 60px;
+	top: 70px;
 	right: 20px;
-}
-	
-body {
-	clear: left
-}
-#swipe {
-	float: right;
-	width: 20%;
-	margin: 10px;
 }
 #cutInHeading {
 	position: absolute;

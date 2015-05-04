@@ -27,8 +27,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="-452.91047"
-     inkscape:cy="-104.74383"
+     inkscape:cx="-1182.3459"
+     inkscape:cy="428.0043"
      inkscape:document-units="px"
      inkscape:current-layer="layer4"
      showgrid="false"
@@ -4653,17 +4653,6 @@
            sodipodi:nodetypes="csssssc" />
       </g>
     </g>
-    <rect
-       style="fill:#de171a;fill-opacity:0.39215686;stroke:none;display:inline"
-       id="TourCol-2-9-1"
-       width="850"
-       height="50"
-       x="-822.5"
-       y="1113.3622"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       inkscape:label="#rect4856-0-9-4"
-       inkscape:export-filename="D:\PROJEKTE\WindLab\GitHub\stopWind\public\demos\iFrameContent\images\menu\TourActiveHalfLong.png" />
     <g
        id="g4619"
        transform="translate(212.5,0)">
@@ -4715,8 +4704,8 @@
        id="TourCol-2-9-50"
        width="425"
        height="50"
-       x="-805.05554"
-       y="1216.8668"
+       x="-815.05554"
+       y="1092.8668"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
        inkscape:label="#rect4856-0-9-4"
@@ -4724,20 +4713,20 @@
     <text
        sodipodi:linespacing="125%"
        id="text4895-0-0-6-6-28"
-       y="1253.1248"
-       x="-661.12585"
+       y="1129.1248"
+       x="-671.12585"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#be3c1b;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
-         y="1253.1248"
-         x="-661.12585"
+         y="1129.1248"
+         x="-671.12585"
          id="tspan4897-6-6-5-7-6"
          sodipodi:role="line">T        UR</tspan></text>
     <path
        sodipodi:open="true"
        sodipodi:end="10.944172"
        sodipodi:start="4.6755168"
-       transform="matrix(1.1648761,0,0,1.1648761,-1003.84,1174.342)"
+       transform="matrix(1.1648761,0,0,1.1648761,-1013.84,1050.342)"
        d="m 340.5006,32.730695 a 25.253813,25.253813 0 1 1 -0.36658,0.01619"
        sodipodi:ry="25.253813"
        sodipodi:rx="25.253813"
@@ -4761,21 +4750,22 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 124.76967,52.75433 -24.24674,13.99886 0,-27.997721 z"
-       transform="matrix(0.80812702,0,0,1.0533712,-694.64702,1186.2969)"
+       transform="matrix(0.80812702,0,0,1.0533712,-704.64702,1062.2969)"
        inkscape:transform-center-x="-3.2657347" />
     <rect
        style="fill:#de171a;fill-opacity:0.39215686;stroke:none;display:inline"
        id="TourCol-2-9-4"
        width="425"
        height="60"
-       x="-816.3692"
-       y="1323.5897"
+       x="-826.3692"
+       y="1199.5897"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
        inkscape:label="#rect4856-0-9-4"
        inkscape:export-filename="D:\PROJEKTE\WindLab\GitHub\stopWind\public\demos\iFrameContent\images\menu\TourActive06.png" />
     <g
-       id="g4882">
+       id="g4882"
+       transform="translate(-10,-124)">
       <text
          xml:space="preserve"
          style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#be3c1b;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
@@ -4796,7 +4786,7 @@
          sodipodi:cy="57.967342"
          sodipodi:rx="25.253813"
          sodipodi:ry="25.253813"
-         d="m 340.5006,32.730695 a 25.253813,25.253813 0 1 1 -0.36658,0.01619"
+         d="m 340.5006,32.730695 c 13.93781,-0.514151 25.65345,10.36788 26.1676,24.305695 0.51415,13.937816 -10.36788,25.653449 -24.3057,26.1676 -13.93781,0.514151 -25.65345,-10.36788 -26.1676,-24.305695 -0.50887,-13.794829 10.15314,-25.442154 23.93912,-26.15141"
          transform="matrix(1.1648761,0,0,1.1648761,-1015.1537,1286.0649)"
          sodipodi:start="4.6755168"
          sodipodi:end="10.944172"
@@ -4824,8 +4814,8 @@
        id="TourCol-2-9-6"
        width="425"
        height="50"
-       x="-822.02606"
-       y="1430.4131"
+       x="-832.02606"
+       y="1306.4131"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
        inkscape:label="#rect4856-0-9-4"
@@ -4833,27 +4823,27 @@
     <text
        sodipodi:linespacing="125%"
        id="text4895-0-0-6-6-1"
-       y="1466.671"
-       x="-678.09637"
+       y="1342.671"
+       x="-688.09637"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
-         y="1466.671"
-         x="-678.09637"
+         y="1342.671"
+         x="-688.09637"
          id="tspan4897-6-6-5-7-2"
          sodipodi:role="line">T        UR</tspan></text>
     <path
        sodipodi:open="true"
        sodipodi:end="10.944172"
        sodipodi:start="4.6755168"
-       transform="matrix(1.1648761,0,0,1.1648761,-1020.8105,1387.8883)"
+       transform="matrix(1.1648761,0,0,1.1648761,-1030.8105,1263.8883)"
        d="m 340.5006,32.730695 a 25.253813,25.253813 0 1 1 -0.36658,0.01619"
        sodipodi:ry="25.253813"
        sodipodi:rx="25.253813"
        sodipodi:cy="57.967342"
        sodipodi:cx="341.43155"
        id="path4891-0-6-8-9-4"
-       style="fill:none;stroke:#000000;stroke-width:3.43384170999999980;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;display:inline"
+       style="fill:none;stroke:#000000;stroke-width:3.43384171;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;display:inline"
        sodipodi:type="arc" />
     <path
        sodipodi:type="star"
@@ -4870,7 +4860,180 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 124.76967,52.75433 -24.24674,13.99886 0,-27.997721 z"
-       transform="matrix(0.80812702,0,0,1.0533712,-711.61757,1399.8432)"
+       transform="matrix(0.80812702,0,0,1.0533712,-721.61757,1275.8432)"
        inkscape:transform-center-x="-3.2657347" />
+    <rect
+       style="fill:#de171a;fill-opacity:0.39215686;stroke:none;display:inline"
+       id="TourCol-2-9-1"
+       width="425"
+       height="50"
+       x="-1823.3501"
+       y="976.4505"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:label="#rect4856-0-9-4"
+       inkscape:export-filename="D:\PROJEKTE\WindLab\GitHub\stopWind\public\iFrameContent\Images\menu\introSmall.png" />
+    <rect
+       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="300"
+       y="561.6532"
+       x="-1833.65"
+       height="204"
+       width="425"
+       id="TourColBig-1-0-6-2"
+       style="fill:#de171a;fill-opacity:0.39215686;stroke:none;display:inline"
+       inkscape:label="#rect4929-3"
+       inkscape:export-filename="D:\PROJEKTE\WindLab\GitHub\stopWind\public\iFrameContent\Images\menu\introBig.png" />
+    <g
+       id="g3642"
+       transform="translate(-21.351562,-3.472958e-6)">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#be3c1b;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+         x="-1745.7203"
+         y="674.91101"
+         id="text4895-0-0-6-1-9-4"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4897-6-6-5-4-3-5"
+           x="-1745.7203"
+           y="674.91101"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">INTR        DUCTION</tspan></text>
+      <path
+         sodipodi:type="arc"
+         style="fill:none;stroke:#ffffff;stroke-width:3.43384171;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;display:inline"
+         id="path4891-0-6-8-0-5-5"
+         sodipodi:cx="341.43155"
+         sodipodi:cy="57.967342"
+         sodipodi:rx="25.253813"
+         sodipodi:ry="25.253813"
+         d="m 340.5006,32.730695 c 13.93781,-0.514151 25.65345,10.36788 26.1676,24.305695 0.51415,13.937816 -10.36788,25.653449 -24.3057,26.1676 -13.93781,0.514151 -25.65345,-10.36788 -26.1676,-24.305695 -0.50887,-13.794829 10.15314,-25.442154 23.93912,-26.15141"
+         transform="matrix(1.1648761,0,0,1.1648761,-2032.4345,596.12843)"
+         sodipodi:start="4.6755168"
+         sodipodi:end="10.944172"
+         sodipodi:open="true" />
+      <path
+         inkscape:transform-center-x="-3.2657347"
+         transform="matrix(0.80812702,0,0,1.0533712,-1723.2415,608.08333)"
+         d="m 124.76967,52.75433 -24.24674,13.99886 0,-27.997721 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.0471976"
+         sodipodi:arg1="0"
+         sodipodi:r2="8.0822458"
+         sodipodi:r1="16.164492"
+         sodipodi:cy="52.75433"
+         sodipodi:cx="108.60518"
+         sodipodi:sides="3"
+         id="path4913-1-6-0-2-7-1"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         sodipodi:type="star" />
+    </g>
+    <rect
+       style="fill:#de171a;fill-opacity:0.39215686;stroke:none;display:inline"
+       id="TourCol-2-9-5-1"
+       width="425"
+       height="100"
+       x="-1826.1"
+       y="797.6532"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:label="#rect4856-0-9-4"
+       inkscape:export-filename="D:\PROJEKTE\WindLab\GitHub\stopWind\public\iFrameContent\Images\menu\IntroActive.png" />
+    <g
+       style="display:inline"
+       id="g3642-6"
+       transform="translate(-13.801514,184)">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#be3c1b;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+         x="-1745.7203"
+         y="674.91101"
+         id="text4895-0-0-6-1-9-4-1"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4897-6-6-5-4-3-5-4"
+           x="-1745.7203"
+           y="674.91101"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">INTR        DUCTION</tspan></text>
+      <path
+         sodipodi:type="arc"
+         style="fill:none;stroke:#ffffff;stroke-width:3.43384171;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;display:inline"
+         id="path4891-0-6-8-0-5-5-2"
+         sodipodi:cx="341.43155"
+         sodipodi:cy="57.967342"
+         sodipodi:rx="25.253813"
+         sodipodi:ry="25.253813"
+         d="m 340.5006,32.730695 c 13.93781,-0.514151 25.65345,10.36788 26.1676,24.305695 0.51415,13.937816 -10.36788,25.653449 -24.3057,26.1676 -13.93781,0.514151 -25.65345,-10.36788 -26.1676,-24.305695 -0.50887,-13.794829 10.15314,-25.442154 23.93912,-26.15141"
+         transform="matrix(1.1648761,0,0,1.1648761,-2032.4345,596.12843)"
+         sodipodi:start="4.6755168"
+         sodipodi:end="10.944172"
+         sodipodi:open="true" />
+      <path
+         inkscape:transform-center-x="-3.2657347"
+         transform="matrix(0.80812702,0,0,1.0533712,-1723.2415,608.08333)"
+         d="m 124.76967,52.75433 -24.24674,13.99886 0,-27.997721 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.0471976"
+         sodipodi:arg1="0"
+         sodipodi:r2="8.0822458"
+         sodipodi:r1="16.164492"
+         sodipodi:cy="52.75433"
+         sodipodi:cx="108.60518"
+         sodipodi:sides="3"
+         id="path4913-1-6-0-2-7-1-3"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         sodipodi:type="star" />
+    </g>
+    <g
+       style="display:inline"
+       id="g3642-6-2"
+       transform="translate(-11.051636,337.79729)">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#be3c1b;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+         x="-1745.7203"
+         y="674.91101"
+         id="text4895-0-0-6-1-9-4-1-2"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4897-6-6-5-4-3-5-4-1"
+           x="-1745.7203"
+           y="674.91101"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">INTR        DUCTION</tspan></text>
+      <path
+         sodipodi:type="arc"
+         style="fill:none;stroke:#ffffff;stroke-width:3.43384171;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;display:inline"
+         id="path4891-0-6-8-0-5-5-2-6"
+         sodipodi:cx="341.43155"
+         sodipodi:cy="57.967342"
+         sodipodi:rx="25.253813"
+         sodipodi:ry="25.253813"
+         d="m 340.5006,32.730695 c 13.93781,-0.514151 25.65345,10.36788 26.1676,24.305695 0.51415,13.937816 -10.36788,25.653449 -24.3057,26.1676 -13.93781,0.514151 -25.65345,-10.36788 -26.1676,-24.305695 -0.50887,-13.794829 10.15314,-25.442154 23.93912,-26.15141"
+         transform="matrix(1.1648761,0,0,1.1648761,-2032.4345,596.12843)"
+         sodipodi:start="4.6755168"
+         sodipodi:end="10.944172"
+         sodipodi:open="true" />
+      <path
+         inkscape:transform-center-x="-3.2657347"
+         transform="matrix(0.80812702,0,0,1.0533712,-1723.2415,608.08333)"
+         d="m 124.76967,52.75433 -24.24674,13.99886 0,-27.997721 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.0471976"
+         sodipodi:arg1="0"
+         sodipodi:r2="8.0822458"
+         sodipodi:r1="16.164492"
+         sodipodi:cy="52.75433"
+         sodipodi:cx="108.60518"
+         sodipodi:sides="3"
+         id="path4913-1-6-0-2-7-1-3-8"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         sodipodi:type="star" />
+    </g>
   </g>
 </svg>

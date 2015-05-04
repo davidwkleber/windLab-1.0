@@ -20,9 +20,11 @@ router.get('/', function(req, res){
 console.log('showDataFrame get');
 console.log('showDataFrame get: dataFrameContent: '+ req.param('dataFrameContent', null));
 dataFrameContent = req.param('dataFrameContent', null);
- // res.reload('index.ejs', {title: "WindLab", dataFrameContent: dataFrameContent });
+iFrameContent = req.param('iFrameContent', null);
 
-res.render('index.ejs', {title: "WindLab", dataFrameContent: dataFrameContent });
+ // res.reload('index.ejs', {title: "WindLab", dataFrameContent: dataFrameContent });
+var contentEjs = (dataFrameContent+'.ejs');
+res.render('index', {title: "WindLab", iFrameContent: iFrameContent, dataFrameContent: dataFrameContent});
 })
 
 router.post('/', function(req, res, next){

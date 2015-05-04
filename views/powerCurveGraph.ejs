@@ -30,17 +30,17 @@
 			var meanDataPoints = [];
 
 			 meanData = []; 
-			 /*
+			 
 			 meanData.push({
 				x: 0,
 				y: 0
 			});
-			*/
+			
 			dataPoints.push({
 				x: 0,
 				y: 0
 			});
-			//	meanDataSeries.dataPoints = meanData;
+				meanDataSeries.dataPoints = meanData;
 				meanDataLine.push(meanDataSeries);
 				
 				 dataSeries.dataPoints = dataPoints;
@@ -65,19 +65,19 @@
 				text: "Power Curve"
 				},
 				animationEnabled: true,
+
 				axisY:{
-					labelAngel: 30,
+					includeZero: false,
 					minimum: 0,
-					maximum: 1000,
-					interval: 1000
+					maximum: 1500,
+					interval: 300
 				},
 				axisX:{
-					includeZero: false,
-					minimum: 95000,
-					maximum: 99000,
+					labelAngel: 30,
+					minimum: 0,
+					maximum: 3000,
 					interval: 1000
 				},
-				
 				// data: [meanDataLine, data]
 				   data: [ meanDataSeries, dataSeries ]
 			});
@@ -209,9 +209,9 @@
 				var sum = [];
 			   var sumPower = 0;
 			   var sumRPM = 0;
-
+console.log("dataTomeanData.length "+dataTomeanData.length);
 				for(var i = 0; i < dataTomeanData.length; i++) {
-					// console.log("meanData: data to meanData: "+dataTomeanData[i]);
+					 console.log("meanData: data to meanData: "+JSON.stringify(dataTomeanData[i]));
 					
 					thisDataItem = JSON.parse(dataTomeanData[i]);
 							sumPower += dataItem.power;
@@ -219,8 +219,8 @@
 
 				};
 				
-				var x = (sumPower / inData.length);
-				var y = (sumRPM / inData.length);
+				var y = (sumPower / dataTomeanData.length);
+				var x = (sumRPM / dataTomeanData.length);
 
 	/*		meanDataLine.push( {
 				x :  x,
@@ -241,6 +241,8 @@
 		//		meanData.shift();
 		//	}
 			meanDataSeries.dataPoints = meanData;
+			console.log("meanData: "+JSON.stringify(meanData));
+			
 			meanDataLine.push(meanDataSeries);
 			
 			console.log("meanDataSeries Line "+JSON.stringify(meanDataLine));

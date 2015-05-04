@@ -88,7 +88,7 @@ io.sockets.on('connection', function(socket){
 		console.log('DataInput : '+data);
 	});
 		io.on('updateData', function(data) {
-		console.log('DataInput UPDATE: '+data);
+	//	console.log('DataInput UPDATE: '+data);
 	});
 		io.emit('updateData', {
 			dataSource: "somethig",
@@ -186,7 +186,7 @@ io.sockets.on('connection', function(socket){
 			sendJSON += "  \"dummyLoad\": "+dummyLoadValueText+"\n";
 			sendJSON += "}";
 			
-			console.log( "serialListener send JSON : \n"+sendJSON);	
+			// console.log( "serialListener send JSON : \n"+sendJSON);	
 
 			io.emit('updateData', sendJSON);
 
