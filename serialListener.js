@@ -165,18 +165,17 @@ io.sockets.on('connection', function(socket){
 			this is from windsock.ejs. 
 			Not the best I know, but hope it works, otherwise windSpeedValue was a percentage...
 		*/
-		var windSpeedValueText = (windSpeedValue*0.1456)-0.5523;
-		windSpeedValueText =  +(Math.round(windSpeedValueText +"e+1")+"e-1");
+		var windSpeedValueText = reutrnWindSpeed(windSpeedValue);
+
 		
 		/* do the same for the pitch angle.
 		*/
-		var pitchAngleValueText = (pitchAngleValue-100)/10;
+		var pitchAngleValueText = returnPitchAngle(pitchAngleValue);
 		
 		/* and dummy load
 			NOTE, the magic number 201 is from DLnumFrames in the dummyLoad.ejs file
 		*/
-		var dummyLoadValueText = ((dummyLoadValue-1)/201)*100;
-		dummyLoadValueText =  +(Math.round(dummyLoadValueText +"e+1")+"e-1");
+		var dummyLoadValueText = returnDummyLoad(dummyLoadValue);
 		
 			// console.log('SEND update data : '+sendData);
 			var sendJSON = '{\n  \"date\": \"'+formatNow+'\",';
@@ -279,3 +278,21 @@ function done() {
 	console.log("DLserialPort done resetting");
 }
 
+function reutrnWindSpeed( windSpeedValueIn ) {
+		var windSpeedValueText = (windSpeedValueIn*0.1456)-0.5523;
+		windSpeedValueText =  +(Math.round(windSpeedValueText +"e+1")+"e-1");
+		if ( windSpeedValueText < 0 ) {
+			windSpeedValueText = 0;
+		}		
+		return windSpeedValueText;
+}		
+
+function returnPitchAngle( pitchAngleIn ) {
+	return  (pitchAngleIn-101)/10;
+}
+
+function returnDummyLoad( dummyLoadIn ) {
+	var dummyLoadValueText = ((dummyLoadValue-1)/201)*100;
+		dummyLoadValueText =  +(Math.round(dummyLoadValueText +"e+1")+"e-1");
+	return dummyLoadValueText;
+}

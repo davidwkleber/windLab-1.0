@@ -133,7 +133,7 @@ WSinstance.currentFrame = WSframeToPlay;
 		//			console.log('client windSpeed: '+WSinstance.currentFrame);
 					var posting = $.post( '/windSpeed', { windSpeedValue: WScurrentValue } );
 					
-					var valueText = (WScurrentValue*0.1456)-0.5523;	
+					var valueText = reutrnWindSpeed(WScurrentValue);	
 					valueText =  +(Math.round(valueText +"e+1")+"e-1");
 					
 				
@@ -148,7 +148,8 @@ WSinstance.currentFrame = WSframeToPlay;
 
 					WScurrentValue = (WSinstance.currentFrame/WSnumFrames)*100;
 
-					var valueText = (WScurrentValue*0.1456)-0.5523;	
+					var valueText = reutrnWindSpeed(WScurrentValue);
+					
 					valueText =  +(Math.round(valueText +"e+1")+"e-1");
 					
 					$(".WScurrentValue span").text(valueText+" m/s");
@@ -175,8 +176,8 @@ WSinstance.currentFrame = WSframeToPlay;
 
 					var posting = $.post( '/windSpeed', { windSpeedValue: WScurrentValue } );
 										
-					var valueText = (WScurrentValue*0.1456)-0.5523;	
-					valueText =  +(Math.round(valueText +"e+1")+"e-1");
+					var valueText = reutrnWindSpeed(WScurrentValue);	
+
 					$(".WScurrentValue span").text(valueText+" m/s");
                     $(".WScurrentFrame span").text(WSinstance.currentFrame);
 					posting.done(function( data ) {
@@ -199,8 +200,7 @@ WSinstance.currentFrame = WSframeToPlay;
 			//		console.log('client windSpeed BUTTON: '+WSinstance.currentFrame);
 					var posting = $.post( '/windSpeed', { windSpeedValue: WScurrentValue } );
 										
-					var valueText = (WScurrentValue*0.1456)-0.5523;	
-					valueText =  +(Math.round(valueText +"e+1")+"e-1");
+					var valueText = reutrnWindSpeed(WScurrentValue);	
 
 					
 					$(".WScurrentValue span").text(valueText+" m/s");
@@ -224,8 +224,8 @@ WSinstance.currentFrame = WSframeToPlay;
 
 					var posting = $.post( '/windSpeed', { windSpeedValue: WScurrentValue } );
 					
-								var WSvalueText = (WScurrentValue*0.1456)-0.5523;	
-					WSvalueText =  +(Math.round(WSvalueText +"e+1")+"e-1");	
+					var WSvalueText = reutrnWindSpeed(WScurrentValue);	
+					
 					WSinstance.gotoAndStop(WSinstance.currentFrame);							
 					$(".WScurrentValue span").text(WSvalueText+"m/s");
                     $(".WScurrentFrame span").text(WSinstance.currentFrame);
@@ -253,8 +253,15 @@ function fixPageXY(e) {
     e.pageY -= html.clientTop || 0
   }
 }
-		
-				
+
+function reutrnWindSpeed( windSpeedValueIn ) {
+		var windSpeedValueText = (windSpeedValueIn*0.1456)-0.5523;
+		windSpeedValueText =  +(Math.round(windSpeedValueText +"e+1")+"e-1");
+		if ( windSpeedValueText < 0 ) {
+			windSpeedValueText = 0;
+		}		
+		return windSpeedValueText;
+}		
         </script>
  </form>
 	</div>

@@ -49,6 +49,7 @@
 		var PAframeToPlay = 1;
 		var PAnumFrames = 600;
 		var PAinitSelection = "on";
+		var PAnumPitchAngle = 101;
 		
 		//setup a variable to store our last position
 var PAlast_position = {},
@@ -141,7 +142,7 @@ PAinstance.gotoAndStop(+PAframeToPlay);
 			
             PAinstance.$dispatcher
                 .on(SpriteClip.Event.ENTER_FRAME, function (e, clip) {
-					var PAcurrentAngle = (PAinstance.currentFrame-101)/10;
+					var PAcurrentAngle = returnPitchAngle(PAinstance.currentFrame);
 					$(".PAcurrentAngle span").text(PAcurrentAngle+"°");
                    //  $(".PAcurrentFrame span").text(PAinstance.currentFrame);
                 });
@@ -157,7 +158,7 @@ PAinstance.gotoAndStop(+PAframeToPlay);
 					
 					var posting = $.post( '/pitchAngle', { pitchAngleValue: PAinstance.currentFrame} );
 										
-					var PAcurrentAngle = (PAinstance.currentFrame-101)/10;
+					var PAcurrentAngle = returnPitchAngle(PAinstance.currentFrame);
 						
 					$(".PAcurrentAngle span").text(PAcurrentAngle+"°");
                  //   $(".PAcurrentFrame span").text(PAinstance.currentFrame);
@@ -183,7 +184,7 @@ PAinstance.gotoAndStop(+PAframeToPlay);
 		//			console.log('client pitchAngle BUTTON: '+PAinstance.currentFrame);
 					var posting = $.post( '/pitchAngle', { pitchAngleValue: PAinstance.currentFrame } );
 					
-					var PAcurrentAngle = (PAinstance.currentFrame-101)/10;
+					var PAcurrentAngle = returnPitchAngle(PAinstance.currentFrame);
 											
 					$(".PAcurrentAngle span").text(PAcurrentAngle+"°");
                     $(".PAcurrentFrame span").text(PAinstance.currentFrame);
@@ -207,7 +208,7 @@ PAinstance.gotoAndStop(+PAframeToPlay);
 			//	console.log("init on? "+PAinitSelection);
 				if (PAinitSelection == "on") {
 									PAinstance.currentFrame = 1;
-					PAcurrentAngle = (PAinstance.currentFrame-101)/10;
+					PAcurrentAngle = returnPitchAngle(PAinstance.currentFrame);
 					PAinstance.gotoAndStop(1);							
 					$(".PAcurrentAngle span").text(PAcurrentAngle+"°");
                     $(".PAcurrentFrame span").text(PAinstance.currentFrame);
@@ -216,7 +217,12 @@ PAinstance.gotoAndStop(+PAframeToPlay);
 
 				}
 		 });
-							 
+			
+
+
+function returnPitchAngle( pitchAngleIn ) {
+	return  (pitchAngleIn-PAnumPitchAngle)/10;
+}			
         </script>
 		
  </form>
