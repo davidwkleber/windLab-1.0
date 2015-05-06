@@ -22,6 +22,8 @@ $(document).ready(function() {
 					console.log("got into timeGraph");
 					window.parent.$("#dataFrame").empty();
 					window.parent.$("#dataFrame").load("lineGraph.html");
+					window.parent.$("#dataFrame").load("record.html");
+
 				break;
 				default :
 					console.log("id is: "+target.id);
