@@ -11,17 +11,17 @@ $(document).ready(function() {
 				case "tourFrame":
 							console.log("got into tourFrame");	
 					window.parent.$("#dataFrame").empty();
-					window.parent.$("#dataFrame").load("/iFrameContent/index.html");
+					window.parent.$("#dataFrame").load("./rightFrame/tourFrameContent/index.html");
 					break;
 				case "powerCurveGraph":
 					console.log("got into powerGraph");
 					window.parent.$("#dataFrame").empty();
-					window.parent.$("#dataFrame").load("powerCurveGraph.html");
+					window.parent.$("#dataFrame").load("./rightFrame/graphs/powerCurveGraph.html");
 					break;
 				case "timeDomainGraph":
 					console.log("got into timeGraph");
 					window.parent.$("#dataFrame").empty();
-					window.parent.$("#dataFrame").load("lineGraph.html");
+					window.parent.$("#dataFrame").load("./rightFrame/graphs/lineGraph.html");
 				//	window.parent.$("#dataFrame").load("record.html");
 
 				break;
