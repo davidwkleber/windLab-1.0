@@ -414,7 +414,7 @@ svg {
 	}
 
 	}
-		.dataFrame {
+		.rightFrame {
 		position: absolute;
 		left: 840px;
 		top: 200px;
@@ -424,7 +424,7 @@ svg {
 		 		  overflow: hidden;
 
 	}
-	#dataFrame {
+	#rightFrame {
 		position: absolute;
 		left: 840px;
 		top: 200px;
