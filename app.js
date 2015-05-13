@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-dataFrameContent = 'powerCurveGraph';
+dataFrameContent = 'lineGraph';
 iFrameContent = 'infoFrame';
 // var serialListener = require('./lib/serialListener');
 

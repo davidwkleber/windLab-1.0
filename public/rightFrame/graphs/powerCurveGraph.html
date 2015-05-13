@@ -19,7 +19,7 @@
 		<button class="PCrecordDataButton" id="PCrecordDataButton" name="PCrecordDataButton" onclick="PCrecordDataFunction()">Record</button>
 	</div>
 	
-	<script type="text/javascript">
+	<script>
 
 // window.onload = function () {
 			var data = []; 
@@ -98,14 +98,14 @@
 			 outData = []; 
 			 
 		setTimeout(function() { console.log("wait"); }, 3000 );
-			var powerGraphSocket = io.connect('http://127.0.0.1:1337');
+		//  powerCurveGraphSocket = io.connect('http://127.0.0.1:1337');
 
-			powerGraphSocket.on('connect', function (dataIn) {
+			powerCurveGraphSocket.on('connect', function (dataIn) {
 					console.log('powerCurve client connected ');
 
 				
 			jQuery(function ($) {
-				powerGraphSocket.on('updateData', function (dataIn) {
+				powerCurveGraphSocket.on('updateData', function (dataIn) {
 				
 					// save the new JSON data to a buffer
 					// this buffer is used for figuring which meanData to show

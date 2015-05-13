@@ -9,19 +9,19 @@ var router = express.Router();
 
 // middleware specific to this route, logs timestamps
 router.use(function timeLog(req, res, next){
-	console.log('lineGraph Time: ', Date.now());
+	console.log('powerCurve Time: ', Date.now());
 	next();
 })
 
 // define the home page route
 router.get('/', function(req, res){
-console.log('lineGraph get');
- 	res.redirect('index');
+console.log('powerCurve get');
+ 	res.render('powerCurve');
 })
 
 router.post('/', function(req, res, next){
 
-console.log('lineGraph post');
+console.log('powerCurve post');
 
 
 })
@@ -29,7 +29,7 @@ console.log('lineGraph post');
 router.put('/', function(req, res, next){
 	var spinnerValue = req.body.value;
 	res.seeValue = req.body.value;
-	res.redirect('index');
+	res.render('powerCurve');
 })
 
 router.get('/about', function(req, res){

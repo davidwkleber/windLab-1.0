@@ -31,11 +31,12 @@
 
 			 meanData = []; 
 			 
+/*
 			 meanData.push({
 				x: 0,
 				y: 0
 			});
-			
+	*/		
 			dataPoints.push({
 				x: 0,
 				y: 0
@@ -97,15 +98,15 @@
 		var inData_limit = 10;
 			 outData = []; 
 		
-			var lineGraphSocket = io.connect('http://127.0.0.1:1337');
+			var powerCurveGraphSocket = io.connect('http://127.0.0.1:1337');
 
-			lineGraphSocket.on('connect', function (dataIn) {
+			powerCurveGraphSocket.on('connect', function (dataIn) {
 					console.log('powerCurve client connected ');
 			//		console.log('lineGraph connected data ' + data);
 
 				
 			jQuery(function ($) {
-				lineGraphSocket.on('updateData', function (dataIn) {
+				powerCurveGraphSocket.on('updateData', function (dataIn) {
 				
 					// save the new JSON data to a buffer
 					// this buffer is used for figuring which meanData to show
@@ -121,12 +122,12 @@
 				 // context.clearRect(0, 0, chart.width, chart.height);
 				chart.width = chart.width;
 
-				// console.log('powerCurve update: ' + dataIn);
+				console.log('powerCurve update: ' + dataIn);
 					dataItem = JSON.parse(dataIn);
 					
 						dataPoints.push({
-							y: dataItem.rpm,
-							x: dataItem.power,
+							x: dataItem.rpm,
+							y: dataItem.power,
 
 						});
 					if (dataPoints.length > limit)
@@ -211,7 +212,7 @@
 			   var sumRPM = 0;
 console.log("dataTomeanData.length "+dataTomeanData.length);
 				for(var i = 0; i < dataTomeanData.length; i++) {
-					 console.log("meanData: data to meanData: "+JSON.stringify(dataTomeanData[i]));
+console.log("meanData: data to meanData: "+JSON.stringify(dataTomeanData[i]));
 					
 					thisDataItem = JSON.parse(dataTomeanData[i]);
 							sumPower += dataItem.power;

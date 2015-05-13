@@ -8,7 +8,7 @@
 
 
 	<form>
-		<div i="graphSelectButtons">
+		<div id="graphSelectButtons">
 			<fieldset id="graphDataSelection">
 				<legend>Select which data to graph</legend>
 							
@@ -30,8 +30,31 @@
 				<label for="rpm">RPM</label>
 				</span>
 			<div id="selectedData"></div>
+</div>
 	</form>
 	</fieldset>
+<link rel="stylesheet" href="../stylesheets/style.css">
+
+<script type="text/javascript" src="/javascripts/JSON2CSV.js"></script>
+<script type="text/javascript" src="/javascripts/JSON2TSV.js"></script>
+
+
+  	<div class="saveDataButtonDiv">
+		<button class="saveDataButton" id="saveDataButton" name="saveDataButton" onclick="saveDataFunction()">Save</button>
+	</div>
+	<div class="recordButtonsDiv" name="recordButtonsDiv" id="recordButtonsDiv" >
+	</div>
+
+		<div class="recordButtons"  id="recordButtons" name="recordButtons">
+    <input type="checkbox" name="recordButtons-checkbox" class="recordButtons-checkbox" id="myrecordButtons" checked>
+    <label class="recordButtons-label" for="myrecordButtons">
+        <span class="recordButtons-inner"></span>
+        <span class="recordButtons-switch"></span>
+    </label>
+		<script type="text/javascript" src="/javascripts/recordScript.js"></script>
+
+</div>
+
 		<script>
 		var dataSelected = 'power';
 		
@@ -68,7 +91,7 @@
 							break;
 						default:
 			//				console.log('graph default');
-							changeAxis( owerMax );
+							changeAxis( powerMax );
 					}
 		//	console.log('dataSelected item is: '+dataSelected);
 		});	
@@ -116,11 +139,12 @@
 				
 	
 		</script>			
-					
- 
- 	</div>
 
-	<% include record %>
- 
+		
+		
+		
+		
+		
+		
   </div>
  

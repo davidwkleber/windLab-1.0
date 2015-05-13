@@ -16,7 +16,7 @@ router.use(function timeLog(req, res, next){
 // define the home page route
 router.get('/', function(req, res){
 console.log('lineGraph get');
- 	res.redirect('index');
+ 	res.render('timeDomainGraph');
 })
 
 router.post('/', function(req, res, next){
@@ -29,7 +29,7 @@ console.log('lineGraph post');
 router.put('/', function(req, res, next){
 	var spinnerValue = req.body.value;
 	res.seeValue = req.body.value;
-	res.redirect('index');
+	res.render('timeDomainGraph');
 })
 
 router.get('/about', function(req, res){
